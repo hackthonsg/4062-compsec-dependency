@@ -20,8 +20,14 @@
         <name>Spring GA Repository</name> 
         <url>http://repo.spring.io/libs-release</url> 
     </repository>
+    <repository>
+      <id>jboss-ga-repository</id>
+      <url>http://maven.repository.redhat.com/techpreview/all</url>
+    </repository>
 </repositories>
   <dependencies>
+  
+  
   <!-- 
      <dependency>
         <groupId>sun.jdk</groupId>
@@ -31,26 +37,30 @@
         <systemPath>C:\Program Files\Java\jdk1.8.0_191\lib\jconsole.jar</systemPath>
     </dependency>
     -->
+    
+    
+    
+    
+   
 	<dependency>
 	    <groupId>org.apache.activemq</groupId>
 	    <artifactId>apache-artemis</artifactId>
 	    <version>1.3.0</version>
 	    <type>pom</type>
 	</dependency>
-	 
+	 <!--  FRIST DEPENDENCIES 
 	<dependency>
 	    <groupId>org.red5</groupId>
 	    <artifactId>red5-server</artifactId>
 	    <version>1.0.8-RELEASE</version>
 	</dependency>	
-<!-- 
+	 
 	<dependency>
 	    <groupId>org.apache.nifi</groupId>
 	    <artifactId>nifi-api</artifactId>
 	    <version>0.7.4</version>
 	    <scope>provided</scope>
 	</dependency>
--->
 
 	<dependency>
 	    <groupId>org.apache.nifi</groupId>
@@ -85,17 +95,12 @@
 	    <version>2.19.3</version>
 	</dependency>
   
-	<!-- https://mvnrepository.com/artifact/org.jenkins-ci.main/jenkins-core -->
 	<dependency>
 	    <groupId>org.jenkins-ci.main</groupId>
 	    <artifactId>jenkins-core</artifactId>
 	    <version>2.19</version>
 	    <scope>provided</scope>
 	</dependency>
-
-
-
-
 
 	<dependency>
 	    <groupId>org.apache.hadoop</groupId>
@@ -114,8 +119,15 @@
 	    <artifactId>plexus-archiver</artifactId>
 	    <version>3.5</version>
 	</dependency>	
-	
-	
+	-->    
+	<!-- https://mvnrepository.com/artifact/org.jboss.bom/jboss-eap-javaee7 -->
+	<dependency>
+	    <groupId>org.jboss.bom</groupId>
+	    <artifactId>jboss-eap-javaee7</artifactId>
+	    <version>7.0.0.GA</version>
+	    <type>pom</type>
+	</dependency>
+		
 	
 	
     
@@ -123,7 +135,7 @@
   
   <build>
         <plugins>
-        <!--  
+ <!-- 
             <plugin>
               <groupId>org.owasp</groupId>
               <artifactId>dependency-check-maven</artifactId>
@@ -136,7 +148,7 @@
                   </execution>
               </executions>
             </plugin>
-            -->
+-->
             
             <plugin>
 		        <groupId>org.apache.felix</groupId>
@@ -145,7 +157,7 @@
 		        <extensions>true</extensions>
 		    </plugin>
 		    
-<!--  
+  <!-- 
 		    <plugin>
 		      <groupId>org.sonatype.ossindex.maven</groupId>
 		      <artifactId>ossindex-maven-plugin</artifactId>
