@@ -15,15 +15,31 @@
   </properties>
   
 	<repositories>
+	
     <repository> 
         <id>repository.spring.release</id> 
         <name>Spring GA Repository</name> 
         <url>http://repo.spring.io/libs-release</url> 
     </repository>
+    
     <repository>
       <id>jboss-ga-repository</id>
       <url>http://maven.repository.redhat.com/techpreview/all</url>
     </repository>
+    
+    <repository>
+	    <id>repository.jboss.org</id>
+	    <name>JBoss - Releases Repository</name>
+	    <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
+	    <layout>default</layout>
+	</repository>
+
+	<repository>
+	    <id>thirdparty.jboss.org</id>
+	    <name>JBoss - Third Party Repository</name>
+	    <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+	    <layout>default</layout>
+	</repository>
 </repositories>
   <dependencies>
   
@@ -38,23 +54,20 @@
     </dependency>
     -->
     
-    
-    
-    
-   
+   <!-- 
 	<dependency>
 	    <groupId>org.apache.activemq</groupId>
 	    <artifactId>apache-artemis</artifactId>
 	    <version>1.3.0</version>
 	    <type>pom</type>
 	</dependency>
-	 <!--  FRIST DEPENDENCIES 
+
 	<dependency>
 	    <groupId>org.red5</groupId>
 	    <artifactId>red5-server</artifactId>
 	    <version>1.0.8-RELEASE</version>
 	</dependency>	
-	 
+
 	<dependency>
 	    <groupId>org.apache.nifi</groupId>
 	    <artifactId>nifi-api</artifactId>
@@ -119,15 +132,108 @@
 	    <artifactId>plexus-archiver</artifactId>
 	    <version>3.5</version>
 	</dependency>	
-	-->    
-	<!-- https://mvnrepository.com/artifact/org.jboss.bom/jboss-eap-javaee7 -->
+
 	<dependency>
 	    <groupId>org.jboss.bom</groupId>
 	    <artifactId>jboss-eap-javaee7</artifactId>
 	    <version>7.0.0.GA</version>
 	    <type>pom</type>
 	</dependency>
-		
+-->
+<!-- https://mvnrepository.com/artifact/xerces/xercesImpl -->
+<dependency>
+    <groupId>xerces</groupId>
+    <artifactId>xercesImpl</artifactId>
+    <version>2.12.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.22.jbossorg-1</version>
+</dependency>
+
+
+
+
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.activemq/apache-artemis -->
+<dependency>
+    <groupId>org.apache.activemq</groupId>
+    <artifactId>apache-artemis</artifactId>
+    <version>1.4.0</version>
+    <type>pom</type>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.nifi/nifi-api -->
+<dependency>
+    <groupId>org.apache.nifi</groupId>
+    <artifactId>nifi-api</artifactId>
+    <version>1.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.red5/red5-server -->
+<dependency>
+    <groupId>org.red5</groupId>
+    <artifactId>red5-server</artifactId>
+    <version>1.0.9-RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.wildfly.core/wildfly-core-feature-pack -->
+<dependency>
+    <groupId>org.wildfly.core</groupId>
+    <artifactId>wildfly-core-feature-pack</artifactId>
+    <version>6.0.2.Final</version>
+    <type>pom</type>
+    <scope>provided</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka -->
+<dependency>
+    <groupId>org.apache.kafka</groupId>
+    <artifactId>kafka_2.12</artifactId>
+    <version>2.0.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.orc/orc-core -->
+<dependency>
+    <groupId>org.apache.orc</groupId>
+    <artifactId>orc-core</artifactId>
+    <version>1.4.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-core -->
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-core</artifactId>
+    <version>2.22.2</version>
+</dependency>
+<!--  https://mvnrepository.com/artifact/org.jenkins-ci.main/jenkins-core  -->
+<dependency>
+    <groupId>org.jenkins-ci.main</groupId>
+    <artifactId>jenkins-core</artifactId>
+    <version>2.85</version>
+    <scope>provided</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
+<dependency>
+    <groupId>org.apache.hadoop</groupId>
+    <artifactId>hadoop-common</artifactId>
+    <version>3.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>9.4.14.v20181114</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.codehaus.plexus/plexus-archiver -->
+<dependency>
+    <groupId>org.codehaus.plexus</groupId>
+    <artifactId>plexus-archiver</artifactId>
+    <version>3.6.0</version>
+</dependency>
+
+
 	
 	
     
@@ -135,7 +241,7 @@
   
   <build>
         <plugins>
- <!-- 
+ <!--  
             <plugin>
               <groupId>org.owasp</groupId>
               <artifactId>dependency-check-maven</artifactId>
@@ -148,7 +254,7 @@
                   </execution>
               </executions>
             </plugin>
--->
+ -->
             
             <plugin>
 		        <groupId>org.apache.felix</groupId>
@@ -157,7 +263,7 @@
 		        <extensions>true</extensions>
 		    </plugin>
 		    
-  <!-- 
+  <!--  
 		    <plugin>
 		      <groupId>org.sonatype.ossindex.maven</groupId>
 		      <artifactId>ossindex-maven-plugin</artifactId>
