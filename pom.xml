@@ -311,14 +311,14 @@ NEW VERSIONS
 			<version>7.0.21</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-catalina</artifactId>
 			<version>7.0.27</version>
 		</dependency>
 
-
+-->
 		<!-- https://mvnrepository.com/artifact/org.apache.wicket/wicket-core -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
